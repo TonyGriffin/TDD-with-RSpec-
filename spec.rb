@@ -24,6 +24,7 @@ class Person
   # implement your behavior here
   def full_name
     [@first_name,@middle_name,@last_name].compact.join(' ')
+    # compact removes instances of nil from arrays
   end
 
   def full_name_with_middle_initial

@@ -43,15 +43,15 @@ RSpec.describe Person do
   describe "#full_name" do
 
     it "concatenates first name, middle name, and last name with spaces" do
-     pers = Person.new(first_name: "Tony", middle_name: "Christopher", last_name: "Griffin")
+     pers = Person.new(first_name: "Jay", middle_name: "Edgar", last_name: "Hoover")
 
-     expect(pers.full_name).to eq("Tony Christopher Griffin")
+     expect(pers.full_name).to eq("Jay Edgar Hoover")
     end
 
     it "does not add extra spaces if middle name is missing" do
-     pers = Person.new(first_name: "Tony", last_name: "Griffin")
+     pers = Person.new(first_name: "Jay", last_name: "Hoover")
 
-     expect(pers.full_name).to eq("Tony Griffin")
+     expect(pers.full_name).to eq("Jay Hoover")
     end
   end   
   
@@ -59,16 +59,16 @@ RSpec.describe Person do
   describe "#full_name_with_middle_initial" do
 
    it "concatenates first name and last name with spaces and places the first charachter of the middle name between them" do
-     pers = Person.new(first_name: "Tony", middle_name: "Christopher", last_name: "Griffin")
+     pers = Person.new(first_name: "Jay", middle_name: "Edgar", last_name: "Hoover")
 
-     expect(pers.full_name_with_middle_initial).to eq("Tony C Griffin")
+     expect(pers.full_name_with_middle_initial).to eq("Jay E Hoover")
     end
 
    it "Returns the full name without  
        the middle name initial if no middle name argument has been provided" do
-       pers = Person.new(first_name: "Tony", last_name: "Griffin")
+       pers = Person.new(first_name: "Jay", last_name: "Hoover")
 
-       expect(pers.full_name_with_middle_initial).to eq("Tony Griffin")
+       expect(pers.full_name_with_middle_initial).to eq("Jay Hoover")
     end
   end   
 
@@ -76,9 +76,9 @@ RSpec.describe Person do
   describe "#initials" do 
     it "Returns only the first charachters of  
         the given arguments and concatenates them into a string with no extra spaces or periods." do
-        pers = Person.new(first_name: "Tony", middle_name: "Christopher", last_name: "Griffin")
+        pers = Person.new(first_name: "Jay", middle_name: "Edgar", last_name: "Hoover")
 
-        expect(pers.initials).to eq("T C G")
+        expect(pers.initials).to eq("J E H")
     end
 
   end 

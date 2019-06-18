@@ -42,7 +42,7 @@ RSpec.describe Calculator do
         expect(calc.factorial(0)).to eq(1)
     end
 
-    it "Will return of the sum of all the positive numbers before the argumnet multiplied togther" do
+    it "Will return of the sum of all the positive numbers before the argument multiplied together" do
         calc = Calculator.new
 
         expect(calc.factorial(5)).to eq(120)

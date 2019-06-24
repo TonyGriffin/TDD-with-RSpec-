@@ -13,6 +13,8 @@
 # make them pass. Then move on to the other two methods, but this time you'll
 # create the descriptions to match the requirements above.
 
+require 'rspec/autorun'
+
 class Person
 
   def initialize(first_name:, middle_name: nil, last_name:)

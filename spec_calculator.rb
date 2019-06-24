@@ -1,3 +1,5 @@
+require 'rspec/autorun'
+
 class Calculator
 
     def addition (a, b)

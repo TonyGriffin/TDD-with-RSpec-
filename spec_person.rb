@@ -34,7 +34,7 @@ class Person
   end
 
   def initials
-    [@first_name[0], @middle_name ? @middle_name[0] : nil, @last_name[0]].compact.join(' ')
+    [@first_name[0], @middle_name ? @middle_name[0] : nil, @last_name[0]].compact.join(' ').upcase
   end
 
 end
@@ -79,8 +79,8 @@ RSpec.describe Person do
   
   describe "#initials" do 
     it "Returns only the first charachters of  
-        the given arguments and concatenates them into a string with no extra spaces or periods." do
-        pers = Person.new(first_name: "Jay", middle_name: "Edgar", last_name: "Hoover")
+        the given arguments and concatenates them into a string with no extra spaces or periods, also ensures they are returned as capital letters" do
+        pers = Person.new(first_name: "Jay", middle_name: "edgar", last_name: "Hoover")
 
         expect(pers.initials).to eq("J E H")
     end
